@@ -13,10 +13,10 @@ If you want to have this as the only job the user can have use add this to group
     ["HBO"] = {
         _config = { gtype = "job" },
     "some.permission"
-  }
+    }
   
   If you want the users to be able to have another job (recommended) add this to groups.lua
   
     ["HBO"] = {
     "some.permission"
-  }
+    }
