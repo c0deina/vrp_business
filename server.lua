@@ -3,7 +3,7 @@ local Tunnel = module("vrp", "lib/Tunnel")
 local Proxy = module("vrp", "lib/Proxy")
 
 vRP = Proxy.getInterface("vRP")
-vRPclient = Tunnel.getInterface("vRP","vRP_empresas")
+vRPclient = Tunnel.getInterface("vRP","vRP_business")
 
 RegisterServerEvent('business:salary')
 AddEventHandler('business:salary', function()
