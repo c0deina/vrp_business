@@ -3,14 +3,6 @@ Key = 38 -- E
 
 vRP = Proxy.getInterface("vRP")
 
-Citizen.CreateThread(function ()
-	while true do
-	local user_id = vRP.getUserId(source)
-		Citizen.Wait(1800000) -- Every 30 minutes you get paid your business money.
-		TriggerServerEvent('business:salary')
-	end
-end)
-
 local blips = {
 	{title="Warner Bros Studios (1320000)", colour=29, id=374, x=-1013.8024, y=-489.4412, z=37.0622},
 }
@@ -51,6 +43,14 @@ Citizen.CreateThread(function ()
 	end
 end)
 
+Citizen.CreateThread(function ()
+	while true do
+	local user_id = vRP.getUserId({source})
+		Citizen.Wait(5000) -- Every 30 minutes you get paid your business money.
+		TriggerServerEvent('business:salary')
+		vRP.notify({"~g~Your business earnings: $26400!"})
+	end
+end)
 
 RegisterNetEvent('business:success')
 AddEventHandler('business:success', function()
