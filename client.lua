@@ -46,7 +46,7 @@ end)
 Citizen.CreateThread(function ()
 	while true do
 	local user_id = vRP.getUserId({source})
-		Citizen.Wait(5000) -- Every 30 minutes you get paid your business money.
+		Citizen.Wait(1800000) -- Every 30 minutes you get paid your business money.
 		TriggerServerEvent('business:salary')
 		vRP.notify({"~g~Your business earnings: $26400!"})
 	end
