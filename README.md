@@ -10,11 +10,9 @@ In order for this to work you'll need to create a new group called "HBO" in your
 
 If you want to have this as the only job the user can have use add this to groups.lua
 
-  ["HBO"] = {
-      _config = { 
-      gtype = "job",
-    },
-	"some.permission"
+    ["HBO"] = {
+        _config = { gtype = "job" },
+    "some.permission"
   }
   
   If you want the users to be able to have another job (recommended) add this to groups.lua
@@ -22,5 +20,3 @@ If you want to have this as the only job the user can have use add this to group
     ["HBO"] = {
     "some.permission"
   }
-  
-  
