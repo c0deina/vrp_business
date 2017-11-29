@@ -1,6 +1,5 @@
 
-description "vRP empresas"
---ui_page "ui/index.html"
+description "vRP business"
 
 dependency "vrp"
 
